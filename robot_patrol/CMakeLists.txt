@@ -38,4 +38,9 @@ install(TARGETS patrol
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install the launch directory where ros2 launch can find it.
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()
