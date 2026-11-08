@@ -38,8 +38,8 @@ install(TARGETS patrol
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# Install the launch directory where ros2 launch can find it.
-install(DIRECTORY launch
+# Install launch files and RViz configurations.
+install(DIRECTORY launch rviz
   DESTINATION share/${PROJECT_NAME}
 )
 
