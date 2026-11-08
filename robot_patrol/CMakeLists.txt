@@ -23,4 +23,19 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# Build the executable from patrol.cpp.
+add_executable(patrol src/patrol.cpp)
+
+# Configure the executable to use these ROS dependencies.
+ament_target_dependencies(patrol
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+)
+
+# Install the executable where ROS can find it.
+install(TARGETS patrol
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_package()
