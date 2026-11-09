@@ -60,7 +60,7 @@ Visualization Manager:
     Value: true
     Description Source: Topic
     Description Topic:
-      Value: /fastbot_1_robot_description
+      Value: /robot_description
       Durability Policy: Transient Local
       Reliability Policy: Reliable
       History Policy: Keep Last
@@ -76,7 +76,7 @@ Visualization Manager:
     Enabled: true
     Value: true
     Topic:
-      Value: /fastbot_1/scan
+      Value: /scan
       Reliability Policy: Best Effort
     Style: Spheres
     Size (m): 0.025
@@ -85,7 +85,7 @@ Visualization Manager:
     Enabled: true
     Value: true
     Topic:
-      Value: /fastbot_1/odom
+      Value: /odom
       Reliability Policy: Best Effort
     Position Tolerance: 0.1
     Angle Tolerance: 0.314159
@@ -103,7 +103,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: fastbot_1_odom
+    Fixed Frame: odom
   Name: root
   Tools:
   - Class: rviz_default_plugins/Interact

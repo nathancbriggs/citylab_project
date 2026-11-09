@@ -16,6 +16,11 @@ def generate_launch_description():
             package="robot_patrol",
             executable="patrol",
             name="patrol",
+            parameters=[{"use_sim_time": False}],
+            remappings=[
+                ("/fastbot_1/scan", "/scan"),
+                ("/fastbot_1/cmd_vel", "/cmd_vel"),
+            ],
             output="screen",
         ),
         Node(
@@ -23,7 +28,7 @@ def generate_launch_description():
             executable="rviz2",
             name="rviz2",
             arguments=["-d", rviz_config],
-            parameters=[{"use_sim_time": True}],
+            parameters=[{"use_sim_time": False}],
             output="screen",
         ),
     ])
